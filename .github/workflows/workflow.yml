@@ -17,14 +17,14 @@ jobs:
       with:
         ref: main
 
-  - name: Setup gcloud
-    uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-    with:
-      service_account_key: ${{ secrets.GCS_SA_KEY }}
-      project_id: test-jhk
-      export_default_credentials: true
+    - name: Setup - gcloud / gsutil
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        service_account_key: ${{ secrets.GCS_SA_KEY }}
+        project_id: test-jhk
+        export_default_credentials: true
     
     
-  - name: Deploy
-    run: |-
-      gsutil -m rsync -R jhkim9403/gitaction-to-GCS gs://gitaction_to_gcs_jhk
+    - name: Deploy
+      run: |-
+        gsutil -m rsync -R jhkim9403/gitaction-to-GCS gs://gitaction_to_gcs_jhk
