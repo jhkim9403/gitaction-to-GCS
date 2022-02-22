@@ -25,4 +25,4 @@ jobs:
     
     - name: Deploy
       run: |-
-        gsutil -m rsync -R /home/runner/work/jhkim9403/gitaction-to-GCS gs://gitaction_to_gcs_jhk
+        gsutil -m rsync -R /home/runner/work/gitaction-to-GCS/gitaction-to-GCS gs://gitaction_to_gcs_jhk
