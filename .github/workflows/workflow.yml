@@ -19,5 +19,5 @@ steps:
     
     
   - name: Deploy
-      run: |-
-        gsutil -m rsync -R output gs://gitaction_to_gcs_jhk
+    run: |-
+      gsutil -m rsync -R output gs://gitaction_to_gcs_jhk
