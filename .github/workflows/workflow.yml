@@ -5,9 +5,8 @@ on:
     
     env:
   GCS_BUCKET: gitaction_to_gcs_jhk
-  
-  
-  steps:
+    
+steps:
 - name: Checkout
     uses: actions/checkout@v2
 
