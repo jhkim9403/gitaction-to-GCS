@@ -1,14 +1,21 @@
+name: git to gcs
+
 on:
   push:
     branches:
     - main
-    
 env:
   GCS_BUCKET: gitaction_to_gcs_jhk
-    
-steps:
-  - name: Checkout
-    uses: actions/checkout@v2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest    
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: main
 
   - name: Setup - gcloud / gsutil
     uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
