@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - master
+    - main
     
 env:
   GCS_BUCKET: gitaction_to_gcs_jhk
